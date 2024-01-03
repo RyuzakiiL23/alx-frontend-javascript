@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { uploadPhoto, createUser } from './utils';
 
 export default async function asyncUploadUser() {
@@ -7,7 +8,6 @@ export default async function asyncUploadUser() {
 
     return {photo, user};
   } catch (error) {
-    console.error(error);
     return {photo: null, user: null};
   }
 }
