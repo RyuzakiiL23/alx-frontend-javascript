@@ -1,4 +1,3 @@
-/* eslint-disable */
 export default class Pricing {
   constructor(amount, currency) {
     this._amount = amount;
@@ -9,23 +8,23 @@ export default class Pricing {
     return this._amount;
   }
 
+  set amount(n) {
+    this._amount = n;
+  }
+
   get currency() {
     return this._currency;
   }
 
-  set currency(update) {
-    this._currency = update;
-  }
-
-  set amount(update) {
-    this._amount = update;
+  set currency(n) {
+    this._currency = n;
   }
 
   displayFullPrice() {
     return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 
-  convertPrice(amount, conversionRate) {
+  static convertPrice(amount, conversionRate) {
     return amount * conversionRate;
   }
 }
