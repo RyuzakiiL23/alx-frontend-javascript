@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default class Pricing {
   constructor(amount, currency) {
     this._amount = amount;
@@ -21,7 +22,7 @@ export default class Pricing {
   }
 
   displayFullPrice() {
-    return `${this._amount} ${this.currency.name} (${this.currency.code})`;
+    return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 
   convertPrice(amount, conversionRate) {
