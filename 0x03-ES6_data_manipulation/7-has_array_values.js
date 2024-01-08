@@ -1,14 +1,8 @@
 export default function hasValuesFromArray(Set, Array) {
-  const trueOrFalse = [];
-  Array.map((elem) => {
-    if (!Set.has(elem)) {
-      trueOrFalse.push(false);
-    } else {
-      trueOrFalse.push(true);
-    }
-    if (trueOrFalse.includes(false)) {
+  for (const item of Array) {
+    if (!Set.has(item)) {
       return false;
     }
-    return true;
-  });
+  }
+  return true;
 }
