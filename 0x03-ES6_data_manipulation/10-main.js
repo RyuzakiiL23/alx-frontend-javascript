@@ -6,3 +6,7 @@ console.log(map);
 
 updateUniqueItems(map)
 console.log(map);
+
+const obj = {'hello': 'world'};
+updateUniqueItems(obj);
+console.log(obj);
